@@ -2,7 +2,7 @@
 <?php get_header(); ?>
     <div id="content">
         <div id="main-content">
-        <?php query_posts('showpost = 2&cat=100');?><?php if (have_posts()) : ?>
+        <?php query_posts('cat=100');?><?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
                 <div class="post" id="post-<?php the_ID(); ?>">
                     <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
