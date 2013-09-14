@@ -15,7 +15,7 @@
                 </div><!-- close:post -->
             <?php endwhile; ?>
             <div class="pagination clearfix">
-                <?php if(function_exists('wp_page_numbers')) {wp_page_number();};?> 
+                <?php if(function_exists('wp_page_numbers')) {wp_page_numbers();};?> 
             </div>
         <?php else : ?>
             <p class="string"><?php _e('You broke the interwebs... wow... way to go.. no really you may want to call someone to take a look at it..','min'); ?></p>
