@@ -19,10 +19,10 @@ def echo(message):
 @robot.text
 def echo(message):
   if message.content == '张凌一':
-      reply=TextReply(message = message, content = 'hello')
+      reply=TextReply(Message = message, content = 'jianren')
       return reply
   else:
-      return 'Bye'
+      return message.content
 
 @robot.image
 def echo(message):
