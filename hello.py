@@ -35,7 +35,8 @@ def echo(message):
           img="http://ww2.sinaimg.cn/large/5f581355gw1e9203prwxuj20d50jxt9u.jpg",
           url="http://ww2.sinaimg.cn/large/5f581355gw1e9203prwxuj20d50jxt9u.jpg"
       )
-      reply.add_article(article1,article2)
+      reply.add_article(article1)
+      reply.add_article(article2)
       return reply
   else:
       return message.content
