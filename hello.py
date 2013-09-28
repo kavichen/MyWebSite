@@ -17,7 +17,9 @@ def echo(message):
 
 @rebot.text
 def echo(message):
-  return message.content
+  if message.content == '张凌一'
+    reply = TextReply(message=message, content='贱人')
+  return reply.content
 
 @rebot.image
 def echo(message):
