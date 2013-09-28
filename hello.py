@@ -18,7 +18,7 @@ def echo(message):
 
 @robot.text
 def echo(message):
-  if message.content == '张凌一':
+  if message.content =='zzz':
       reply=TextReply(Message = message, content = 'jianren')
       return reply
   else:
