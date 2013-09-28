@@ -11,16 +11,16 @@ robot = werobot.WeRoBot(token='kavichen')
 
 @robot.subscribe
 def subscribe(message):
-  return '哈哈，多谢你的关注，目前我还在开发这个站，更多功能敬请期待啊啊啊啊啊！'
+  return '哈哈，多谢你的关注，目前小爷还在开发这个站，更多功能敬请期待啊啊啊啊啊！回复「X」，满满的福利！'
 
 @robot.location
 def echo(message):
-    return '是坐标！你给我等着，分分钟来砍死你！'
+    return '有本事站在原地不要离开，分分钟找人来砍死你！'
 
 @robot.text
 def echo(message):
   if message.content=='陈琦威'.decode('utf-8'):
-      reply=TextReply(message = message, content = 'jianren')
+      reply=TextReply(message = message, content = '贱人')
       return reply
   elif message.content == 'x' or message.content == 'X':
       img_num = random.randint(1,3869)
@@ -41,9 +41,9 @@ def echo(message):
       #reply.add_article(article2)
       return reply
   else:
-      return message.content
+      return '输入 X 啊'
 
 @robot.image
 def echo(message):
-  return '图片'
+  return '是你的裸照吗？'
 robot.run()
