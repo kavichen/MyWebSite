@@ -15,7 +15,7 @@ def subscribe(message):
 
 @robot.location
 def echo(message):
-    return '地址'
+    return '是坐标！你给我等着，分分钟来砍死你！'
 
 @robot.text
 def echo(message):
