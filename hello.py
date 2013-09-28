@@ -22,12 +22,12 @@ def echo(message):
   if message.content=='陈琦威'.decode('utf-8'):
       reply=TextReply(message = message, content = 'jianren')
       return reply
-  elif message.content == 'x':
+  elif message.content == 'x' or message.content == 'X':
       img_num = random.randint(1,10)
       reply=ArticlesReply(message=message)
       article = Article(
-          title="mm",
-          description="test",
+          title="妹子",
+          description="第%s号妹子" % img_num,
           img="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num,
           url="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num
       )
