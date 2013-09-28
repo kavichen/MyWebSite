@@ -30,17 +30,10 @@ def echo(message):
             img="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num,
             url="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num
         )
-        #article2 = Article(
-        #    title = "mm2",
-        #    description = "test2",
-        #    img="http://ww2.sinaimg.cn/large/5f581355gw1e9203prwxuj20d50jxt9u.jpg",
-        #    url="http://ww2.sinaimg.cn/large/5f581355gw1e9203prwxuj20d50jxt9u.jpg"
-        #)
         reply.add_article(article)
-        #reply.add_article(article2)
         return reply
-    elif len(message.content.decode('utf-8'))>3:
-        return 'c'
+    #elif len(message.content.decode('utf-8'))>3:
+    #    return 'c'
         #split_word = list(message.content.decode('utf-8'))
         #if split_word[-2] == '天'.decode('utf-8') and split_word[-1] == '气'.decode('utf-8'):
         #    word_len = len(message.content.decode('utf-8'))
