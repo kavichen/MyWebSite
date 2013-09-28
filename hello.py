@@ -40,12 +40,13 @@ def echo(message):
       #reply.add_article(article2)
       return reply
     elif len(message.content.decode('utf-8'))>3:
-        split_word = list(message.content.decode('utf-8'))
-        if split_word[-2] == '天'.decode('utf-8') and split_word[-1] == '气'.decode('utf-8'):
-            word_len = len(message.content.decode('utf-8'))
-            city_name_list = split_word[0:word_len-2]
-            city_name = "".join(itertools.chain(*city_name_list))
-            return city_name
+        return message.content
+        #split_word = list(message.content.decode('utf-8'))
+        #if split_word[-2] == '天'.decode('utf-8') and split_word[-1] == '气'.decode('utf-8'):
+        #    word_len = len(message.content.decode('utf-8'))
+        #    city_name_list = split_word[0:word_len-2]
+        #    city_name = "".join(itertools.chain(*city_name_list))
+        #    return city_name
     elif message.content=='陈琦威'.decode('utf-8'):
       reply=TextReply(message = message, content = '贱人')
       return reply
