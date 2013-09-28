@@ -19,7 +19,7 @@ def echo(message):
 def echo(message):
   if message.content == '张凌一':
     reply = TextReply(message=message, content='贱人')
-  return reply.content
+  return reply
 
 @robot.image
 def echo(message):
