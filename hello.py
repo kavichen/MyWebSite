@@ -17,7 +17,7 @@ def echo(message):
 
 @rebot.text
 def echo(message):
-  if message.content == '张凌一'
+  if message.content == '张凌一':
     reply = TextReply(message=message, content='贱人')
   return reply.content
 
