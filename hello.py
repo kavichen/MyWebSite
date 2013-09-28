@@ -2,6 +2,8 @@
 import werobot
 from werobot.reply import ArticlesReply, Article,TextReply
 import random
+import json
+import itertools
 
 robot = werobot.WeRoBot(token='kavichen')
 
@@ -19,10 +21,7 @@ def echo(message):
 
 @robot.text
 def echo(message):
-  if message.content=='陈琦威'.decode('utf-8'):
-      reply=TextReply(message = message, content = '贱人')
-      return reply
-  elif message.content == 'x' or message.content == 'X':
+    if message.content == 'x' or message.content == 'X':
       img_num = random.randint(1,3869)
       reply=ArticlesReply(message=message)
       article = Article(
@@ -40,7 +39,17 @@ def echo(message):
       reply.add_article(article)
       #reply.add_article(article2)
       return reply
-  else:
+    elif len(message.content.decode('utf-8'))>3:
+        split_word = list(message.content.decode('utf-8'))
+        if split_word[-2] == '天'.decode('utf-8') and split_word[-1] == '气'.decode('utf-8'):
+            word_len = len(message.content.decode('utf-8'))
+            city_name_list = split_word[0:word_len-2]
+            city_name = "".join(itertools.chain(*city_name_list))
+            return city_name
+    elif message.content=='陈琦威'.decode('utf-8'):
+      reply=TextReply(message = message, content = '贱人')
+      return reply
+    else:
       return '输入 X 啊'
 
 @robot.image
