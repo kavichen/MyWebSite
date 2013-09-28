@@ -1,5 +1,6 @@
 #coding=utf-8
 import werobot
+from werobot.reply import ArticlesReply, Article,TextReply
 
 robot = werobot.WeRoBot(token='kavichen')
 
@@ -18,8 +19,10 @@ def echo(message):
 @robot.text
 def echo(message):
   if message.content == '张凌一':
-    reply = TextReply(message=message, content='贱人')
-  return reply
+      reply=TextReply(message = message, content = 'hello')
+      return reply
+  else:
+      return 'Bye'
 
 @robot.image
 def echo(message):
