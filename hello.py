@@ -1,6 +1,7 @@
 #coding=utf-8
 import werobot
 from werobot.reply import ArticlesReply, Article,TextReply
+import random
 
 robot = werobot.WeRoBot(token='kavichen')
 
@@ -22,21 +23,22 @@ def echo(message):
       reply=TextReply(message = message, content = 'jianren')
       return reply
   elif message.content == 'x':
+      img_num = random.randint(1,10)
       reply=ArticlesReply(message=message)
-      article1 = Article(
+      article = Article(
           title="mm",
           description="test",
-          img="http://ww4.sinaimg.cn/large/5f581355gw1e91zrosf3sj20c10ezt9z.jpg",
-          url="http://ww4.sinaimg.cn/large/5f581355gw1e91zrosf3sj20c10ezt9z.jpg"
+          img="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num,
+          url="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num
       )
-      article2 = Article(
-          title = "mm2",
-          description = "test2",
-          img="http://ww2.sinaimg.cn/large/5f581355gw1e9203prwxuj20d50jxt9u.jpg",
-          url="http://ww2.sinaimg.cn/large/5f581355gw1e9203prwxuj20d50jxt9u.jpg"
-      )
-      reply.add_article(article1)
-      reply.add_article(article2)
+      #article2 = Article(
+      #    title = "mm2",
+      #    description = "test2",
+      #    img="http://ww2.sinaimg.cn/large/5f581355gw1e9203prwxuj20d50jxt9u.jpg",
+      #    url="http://ww2.sinaimg.cn/large/5f581355gw1e9203prwxuj20d50jxt9u.jpg"
+      #)
+      reply.add_article(article)
+      #reply.add_article(article2)
       return reply
   else:
       return message.content
