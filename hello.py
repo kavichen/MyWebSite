@@ -40,7 +40,7 @@ def echo(message):
         #reply.add_article(article2)
         return reply
     elif len(message.content.decode('utf-8'))>3:
-        return message.content
+        return 'c'
         #split_word = list(message.content.decode('utf-8'))
         #if split_word[-2] == '天'.decode('utf-8') and split_word[-1] == '气'.decode('utf-8'):
         #    word_len = len(message.content.decode('utf-8'))
