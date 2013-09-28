@@ -23,7 +23,7 @@ def echo(message):
       reply=TextReply(message = message, content = 'jianren')
       return reply
   elif message.content == 'x' or message.content == 'X':
-      img_num = random.randint(1,10)
+      img_num = random.randint(1,3869)
       reply=ArticlesReply(message=message)
       article = Article(
           title="妹子",
