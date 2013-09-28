@@ -15,13 +15,13 @@ def subscribe(message):
 def echo(message):
     return '地址'
 
-@rebot.text
+@robot.text
 def echo(message):
   if message.content == '张凌一':
     reply = TextReply(message=message, content='贱人')
   return reply.content
 
-@rebot.image
+@robot.image
 def echo(message):
   return '图片'
 robot.run()
