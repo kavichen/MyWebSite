@@ -38,7 +38,7 @@ def echo(message,session):
         session["count"]=count
         img_num = random.randint(1,3869)
         reply=ArticlesReply(message=message)
-        if count <= 5:
+        if count <= 1000:
             article = Article(
                 title="妹子",
                 description="第%s号妹子" % img_num,
