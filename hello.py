@@ -14,11 +14,10 @@ session_storage = MongoDBStorage(collection)
 robot = werobot.WeRoBot(token='kavichen',enable_session=True,session_storage = session_storage)
 
 @robot.text
-def first(message, session):
-    if 'last' in session:
-        return
-    session['last'] = message.content
-    return message.content
+def hello(message,session):
+    count = session.get("count",0)+1
+    session["count"]=count
+    return "%s" % count
 
 @robot.subscribe
 def subscribe(message):
