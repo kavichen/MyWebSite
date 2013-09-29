@@ -7,8 +7,8 @@ import itertools
 from werobot.session.mongodbstorage import MongoDBStorage
 import pymongo
 
-robot = werobot.WeRoBot(token='kavichen',enable_session=True)
-
+#robot = werobot.WeRoBot(token='kavichen',enable_session=True)
+robot = werobot.WeRoBot(token='kavichen')
 #collection = pymongo.MongoClient()["wechat"]["session"]
 #session_storage = MongoDBStorage(collection)
 #robot = werobot.WeRoBot(token='kavichen',enable_session=True,session_storage = session_storage)
@@ -29,12 +29,12 @@ def echo(message):
     return '有本事站在原地不要离开，分分钟找人来砍死你！'
 
 @robot.text
-def echo(message,session):
-    if message.content == 'a' or message.content == 'A':
-        count = session.get("count",0)+1
-        session["count"] = count
-        return "%s" %count
-    elif message.content == 'x' or message.content == 'X':
+def echo(message):
+    #if message.content == 'a' or message.content == 'A':
+    #    count = session.get("count",0)+1
+    #    session["count"] = count
+    #    return "%s" %count
+    if message.content == 'x' or message.content == 'X':
         img_num = random.randint(1,3869)
         reply=ArticlesReply(message=message)
         article = Article(
