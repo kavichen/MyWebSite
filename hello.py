@@ -7,7 +7,7 @@ import itertools
 
 robot = werobot.WeRoBot(token='kavichen',enable_session=True)
 
-@robot.handler
+@robot.text
 def hello(message, session):
     count = session.get("count", 0) + 1
     session["count"] = count
