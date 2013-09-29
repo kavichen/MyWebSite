@@ -8,17 +8,17 @@ from werobot.session.mongodbstorage import MongoDBStorage
 import pymongo
 
 #robot = werobot.WeRoBot(token='kavichen',enable_session=True)
-robot = werobot.WeRoBot(token='kavichen')
-#collection = pymongo.MongoClient()["wechat"]["session"]
-#session_storage = MongoDBStorage(collection)
-#robot = werobot.WeRoBot(token='kavichen',enable_session=True,session_storage = session_storage)
+#robot = werobot.WeRoBot(token='kavichen')
+collection = pymongo.MongoClient()["wechat"]["session"]
+session_storage = MongoDBStorage(collection)
+robot = werobot.WeRoBot(token='kavichen',enable_session=True,session_storage = session_storage)
 
-#@robot.text
-#def first(message, session):
-#    if 'last' in session:
-#        return
-#    session['last'] = message.content
-#    return message.content
+@robot.text
+def first(message, session):
+    if 'last' in session:
+        return
+    session['last'] = message.content
+    return message.content
 
 @robot.subscribe
 def subscribe(message):
