@@ -8,10 +8,11 @@ import itertools
 robot = werobot.WeRoBot(token='kavichen',enable_session=True)
 
 @robot.text
-def hello(message, session):
-    count = session.get("count", 0) + 1
-    session["count"] = count
-    return "Hello! You have sent %s messages to me" % count
+def first(message, session):
+    if 'last' in session:
+        return
+    session['last'] = message.content
+    return message.content
 
 @robot.subscribe
 def subscribe(message):
