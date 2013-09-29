@@ -13,11 +13,11 @@ collection = pymongo.MongoClient()["wechat"]["session"]
 session_storage = MongoDBStorage(collection)
 robot = werobot.WeRoBot(token='kavichen',enable_session=True,session_storage = session_storage)
 
-@robot.text
-def hello(message,session):
-    count = session.get("count",0)+1
-    session["count"]=count
-    return "%s" % count
+#@robot.text
+#def hello(message,session):
+#    count = session.get("count",0)+1
+#    session["count"]=count
+#    return "%s" % count
 
 @robot.subscribe
 def subscribe(message):
@@ -28,22 +28,27 @@ def echo(message):
     return '有本事站在原地不要离开，分分钟找人来砍死你！'
 
 @robot.text
-def echo(message):
+def echo(message,session):
     #if message.content == 'a' or message.content == 'A':
     #    count = session.get("count",0)+1
     #    session["count"] = count
     #    return "%s" %count
     if message.content == 'x' or message.content == 'X':
+        count = session.get("count",0)+1
+        session["count"]=count
         img_num = random.randint(1,3869)
         reply=ArticlesReply(message=message)
-        article = Article(
-            title="妹子",
-            description="第%s号妹子" % img_num,
-            img="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num,
-            url="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num
-        )
-        reply.add_article(article)
-        return reply
+        if count <= 5:
+            article = Article(
+                title="妹子",
+                description="第%s号妹子" % img_num,
+                img="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num,
+                url="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num
+            )
+            reply.add_article(article)
+            return reply
+        else:
+            return '看那么多次啊你！'
     #elif len(message.content.decode('utf-8'))>3:
     #    return 'c'
         #split_word = list(message.content.decode('utf-8'))
