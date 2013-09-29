@@ -5,7 +5,7 @@ import random
 import json
 import itertools
 
-robot = werobot.WeRoBot(token='kavichen')
+robot = werobot.WeRoBot(token='kavichen',enable_session=True)
 
 #@robot.handler
 #def echo(message):
@@ -20,8 +20,12 @@ def echo(message):
     return '有本事站在原地不要离开，分分钟找人来砍死你！'
 
 @robot.text
-def echo(message):
-    if message.content == 'x' or message.content == 'X':
+def echo(message,session):
+    if message.content == 'a':
+        count = session.get("count",0)+1
+        session["count"] = count
+        return "%s" %count
+    elif message.content == 'x' or message.content == 'X':
         img_num = random.randint(1,3869)
         reply=ArticlesReply(message=message)
         article = Article(
