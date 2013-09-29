@@ -7,9 +7,11 @@ import itertools
 
 robot = werobot.WeRoBot(token='kavichen',enable_session=True)
 
-#@robot.handler
-#def echo(message):
-#return 'Hello World!'
+@robot.handler
+def hello(message, session):
+    count = session.get("count", 0) + 1
+    session["count"] = count
+    return "Hello! You have sent %s messages to me" % count
 
 @robot.subscribe
 def subscribe(message):
@@ -19,36 +21,36 @@ def subscribe(message):
 def echo(message):
     return '有本事站在原地不要离开，分分钟找人来砍死你！'
 
-@robot.text
-def echo(message,session):
-    if message.content == 'a':
-        count = session.get("count",0)+1
-        session["count"] = count
-        return "%s" %count
-    elif message.content == 'x' or message.content == 'X':
-        img_num = random.randint(1,3869)
-        reply=ArticlesReply(message=message)
-        article = Article(
-            title="妹子",
-            description="第%s号妹子" % img_num,
-            img="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num,
-            url="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num
-        )
-        reply.add_article(article)
-        return reply
-    #elif len(message.content.decode('utf-8'))>3:
-    #    return 'c'
-        #split_word = list(message.content.decode('utf-8'))
-        #if split_word[-2] == '天'.decode('utf-8') and split_word[-1] == '气'.decode('utf-8'):
-        #    word_len = len(message.content.decode('utf-8'))
-        #    city_name_list = split_word[0:word_len-2]
-        #    city_name = "".join(itertools.chain(*city_name_list))
-        #    return city_name
-    elif message.content=='陈琦威'.decode('utf-8'):
-        reply=TextReply(message = message, content = '贱人')
-        return reply
-    else:
-        return '输入 X 啊'
+#@robot.text
+#def echo(message,session):
+#    if message.content == 'a' or message.content == 'A':
+#        count = session.get("count",0)+1
+#        session["count"] = count
+#        return "%s" %count
+#    elif message.content == 'x' or message.content == 'X':
+#        img_num = random.randint(1,3869)
+#        reply=ArticlesReply(message=message)
+#        article = Article(
+#            title="妹子",
+#            description="第%s号妹子" % img_num,
+#            img="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num,
+#            url="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num
+#        )
+#        reply.add_article(article)
+#        return reply
+#    #elif len(message.content.decode('utf-8'))>3:
+#    #    return 'c'
+#        #split_word = list(message.content.decode('utf-8'))
+#        #if split_word[-2] == '天'.decode('utf-8') and split_word[-1] == '气'.decode('utf-8'):
+#        #    word_len = len(message.content.decode('utf-8'))
+#        #    city_name_list = split_word[0:word_len-2]
+#        #    city_name = "".join(itertools.chain(*city_name_list))
+#        #    return city_name
+#    elif message.content=='陈琦威'.decode('utf-8'):
+#        reply=TextReply(message = message, content = '贱人')
+#        return reply
+#    else:
+#        return '输入 X 啊'
 
 @robot.image
 def echo(message):
