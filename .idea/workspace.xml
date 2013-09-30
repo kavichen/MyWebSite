@@ -5,7 +5,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/blog/wp-content/themes/alliswell-min-theme-c53cba0/.gina_diary.php.swp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/blog/wp-content/themes/alliswell-min-theme-c53cba0/.index.php.swp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/blog/wp-content/themes/alliswell-min-theme-c53cba0/.swp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hello.py" afterPath="$PROJECT_DIR$/hello.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/process_file.py" afterPath="$PROJECT_DIR$/process_file.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyWebSite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +32,7 @@
             <file leaf-file-name="process_file.py" pinned="false" current="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/../Learn_Python/root/process_file.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state line="27" column="18" selection-start="581" selection-end="581" vertical-scroll-proportion="0.4171123" vertical-offset="15" max-vertical-offset="1290">
+                  <state line="49" column="25" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.7860963" vertical-offset="0" max-vertical-offset="1290">
                     <folding>
                       <element signature="e#14#23#0" expanded="true" />
                     </folding>
@@ -49,13 +51,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hello.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hello.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hello.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="42" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.6898396" vertical-offset="180" max-vertical-offset="1410">
+            <state line="55" column="42" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1410">
               <folding>
                 <element signature="e#14#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="process_file.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/process_file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="22" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="5" selection-start="210" selection-end="210" vertical-scroll-proportion="0.4171123" vertical-offset="0" max-vertical-offset="935">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,8 +98,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../Learn_Python/root/process_file.py" />
         <option value="$PROJECT_DIR$/hello.py" />
+        <option value="$PROJECT_DIR$/process_file.py" />
+        <option value="$PROJECT_DIR$/../Learn_Python/root/process_file.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -388,21 +410,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hello.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="42" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1410">
+          <folding>
+            <element signature="e#14#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="22" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../Learn_Python/root/process_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="18" selection-start="581" selection-end="581" vertical-scroll-proportion="0.4171123" vertical-offset="15" max-vertical-offset="1290">
+        <state line="49" column="25" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.7860963" vertical-offset="0" max-vertical-offset="1290">
           <folding>
             <element signature="e#14#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hello.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="42" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.6898396" vertical-offset="180" max-vertical-offset="1410">
-          <folding>
-            <element signature="e#14#28#0" expanded="true" />
-          </folding>
+        <state line="26" column="5" selection-start="210" selection-end="210" vertical-scroll-proportion="0.4171123" vertical-offset="0" max-vertical-offset="935">
+          <folding />
         </state>
       </provider>
     </entry>

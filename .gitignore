@@ -24,3 +24,5 @@
 
 # OSX file
 .DS_Store
+.idea
+

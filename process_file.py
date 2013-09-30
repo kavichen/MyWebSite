@@ -71,9 +71,9 @@ def md5File(name):
     a_file.close()
     return m.hexdigest()
 
-currentPath = os.getcwd()+'/2'
-newPath = os.getcwd()
-moveAllFiles(currentPath,newPath)
+#currentPath = os.getcwd()+'/2'
+#newPath = os.getcwd()
+#moveAllFiles(currentPath,newPath)
 #numericRenameAllFilesInPath(currentPath)
 
 
