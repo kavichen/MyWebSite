@@ -35,7 +35,7 @@ def echo(message,session):
         #se = session_storage[id]
         #session = session_storage[id]
         #s = '%id\'s seesion is %s' %id %session
-        return count
+        return 'count'
     elif message.content == 'a' or message.content == 'A':
         return 'ok'
 
