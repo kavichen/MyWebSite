@@ -31,9 +31,9 @@ def echo(message):
 def echo(message,session):
     if message.content == 't' or message.content == 'T':
         id = message.source
-        session = session_storage[id]
-        s = '%id\'s seesion is %s' %id %session
-        return s
+        #session = session_storage[id]
+        #s = '%id\'s seesion is %s' %id %session
+        return id
     elif message.content == 'a' or message.content == 'A':
         return 'ok'
 
