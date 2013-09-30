@@ -17,11 +17,7 @@ robot = werobot.WeRoBot(token='kavichen',enable_session=True,session_storage = s
 #    session["count"]=count
 #    return "%s" % count
 
-@robot.text
-def echo(message,session):
-    if message.content == 't' or message.content == 'T':
-        id = session.get("wechat_id",0)
-        return id
+
 
 @robot.subscribe
 def subscribe(message):
@@ -30,6 +26,14 @@ def subscribe(message):
 @robot.location
 def echo(message):
     return '有本事站在原地不要离开，分分钟找人来砍死你！'
+
+@robot.text
+def echo(message,session):
+    if message.content == 't' or message.content == 'T':
+        id = session.get("wechat_id",0)
+        return id
+    elif message.content == 'a' or message.content == 'A':
+        return 'haha'
 
 #@robot.text
 #def echo(message,session):
