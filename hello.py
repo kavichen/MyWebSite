@@ -31,7 +31,7 @@ def echo(message):
 def echo(message,session):
     if message.content == 't' or message.content == 'T':
         id = message.source
-        count = session.get("count",id)
+        count = session.get("count",1)
         #se = session_storage[id]
         #session = session_storage[id]
         #s = '%id\'s seesion is %s' %id %session
