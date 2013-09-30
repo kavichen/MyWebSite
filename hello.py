@@ -2,8 +2,6 @@
 import werobot
 from werobot.reply import ArticlesReply, Article,TextReply
 import random
-import json
-import itertools
 from werobot.session.mongodbstorage import MongoDBStorage
 import pymongo
 
@@ -18,6 +16,12 @@ robot = werobot.WeRoBot(token='kavichen',enable_session=True,session_storage = s
 #    count = session.get("count",0)+1
 #    session["count"]=count
 #    return "%s" % count
+
+@robot.text
+def test(message,session):
+    if message.content == 't' or message.content == 'T':
+        id = session.get("wechat_id",0)
+        return id
 
 @robot.subscribe
 def subscribe(message):
