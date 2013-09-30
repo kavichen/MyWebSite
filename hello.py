@@ -31,10 +31,11 @@ def echo(message):
 def echo(message,session):
     if message.content == 't' or message.content == 'T':
         id = message.source
-        se = session_storage[id]
+        count = session.get("count",id)
+        #se = session_storage[id]
         #session = session_storage[id]
         #s = '%id\'s seesion is %s' %id %session
-        return se
+        return count
     elif message.content == 'a' or message.content == 'A':
         return 'ok'
 
