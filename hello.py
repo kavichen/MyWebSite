@@ -28,39 +28,39 @@ def echo(message):
     return '有本事站在原地不要离开，分分钟找人来砍死你！'
 
 @robot.text
-def echo(message,session):
-    if message.content == 't' or message.content == 'T':
-        id = message.source
-        count = session.get("count",0)
-        #se = session_storage[id]
-        #session = session_storage[id]
-        #s = '%id\'s seesion is %s' %id %session
-        return 'count'
-    elif message.content == 'a' or message.content == 'A':
-        return 'ok'
-
-#@robot.text
 #def echo(message,session):
-#    #if message.content == 'a' or message.content == 'A':
-#    #    count = session.get("count",0)+1
-#    #    session["count"] = count
-#    #    return "%s" %count
-#    if message.content == 'x' or message.content == 'X':
-#        count = session.get("count",0)+1
-#        session["count"]=count
-#        img_num = random.randint(1,3869)
-#        reply=ArticlesReply(message=message)
-#        if count <= 1000:
-#            article = Article(
-#                title="妹子",
-#                description="第%s号妹子" % img_num,
-#                img="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num,
-#                url="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num
-#            )
-#            reply.add_article(article)
-#            return reply
-#        else:
-#            return '看那么多次啊你！'
+#    if message.content == 't' or message.content == 'T':
+#        id = message.source
+#        count = session.get("count",0)
+#        #se = session_storage[id]
+#        #session = session_storage[id]
+#        #s = '%id\'s seesion is %s' %id %session
+#        return count
+#    elif message.content == 'a' or message.content == 'A':
+#        return 'ok'
+
+@robot.text
+def echo(message,session):
+    #if message.content == 'a' or message.content == 'A':
+    #    count = session.get("count",0)+1
+    #    session["count"] = count
+    #    return "%s" %count
+    if message.content == 'x' or message.content == 'X':
+        count = session.get("count",0)+1
+        session["count"]=count
+        img_num = random.randint(1,3869)
+        reply=ArticlesReply(message=message)
+        if count <= 1000:
+            article = Article(
+                title="妹子",
+                description="第%s号妹子" % img_num,
+                img="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num,
+                url="http://chenqiwei.com/image/jiandan/%i.jpg" % img_num
+            )
+            reply.add_article(article)
+            return reply
+        else:
+            return '看那么多次啊你！'
     #############################################
     #elif len(message.content.decode('utf-8'))>3:
     #    return 'c'
@@ -71,11 +71,11 @@ def echo(message,session):
         #    city_name = "".join(itertools.chain(*city_name_list))
         #    return city_name
     #############################################
-    #elif message.content=='陈琦威'.decode('utf-8'):
-    #    reply=TextReply(message = message, content = '贱人')
-    #    return reply
-    #else:
-    #    return '输入 X 啊'
+    elif message.content=='陈琦威'.decode('utf-8'):
+        reply=TextReply(message = message, content = '贱人')
+        return reply
+    else:
+        return '输入 X 啊'
 
 @robot.image
 def echo(message):
