@@ -18,7 +18,7 @@ robot = werobot.WeRoBot(token='kavichen',enable_session=True,session_storage = s
 #    return "%s" % count
 
 @robot.text
-def test(message,session):
+def echo(message,session):
     if message.content == 't' or message.content == 'T':
         id = session.get("wechat_id",0)
         return id
