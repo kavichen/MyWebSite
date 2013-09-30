@@ -50,9 +50,9 @@ def echo(message,session):
     if message.content == 'x' or message.content == 'X':
         count = session.get("count",0)+1
         session["count"]=count
-        imgDirPath = os.getcwd()
+        imgDirPath = os.getcwd()+'/image/jiandan/'
         imgFileList = process_file.getFileListInPath(imgDirPath)
-        maxNum = len(imgFileList)-1
+        maxNum = len(imgFileList)-1 # 有个爬虫程序 jiandan.py
         img_num = random.randint(1,maxNum)
         reply=ArticlesReply(message=message)
         if count <= 1000:
