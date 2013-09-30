@@ -4,6 +4,8 @@ from werobot.reply import ArticlesReply, Article,TextReply
 import random
 from werobot.session.mongodbstorage import MongoDBStorage
 import pymongo
+import os
+import process_file
 
 #robot = werobot.WeRoBot(token='kavichen',enable_session=True)
 #robot = werobot.WeRoBot(token='kavichen')
@@ -48,7 +50,10 @@ def echo(message,session):
     if message.content == 'x' or message.content == 'X':
         count = session.get("count",0)+1
         session["count"]=count
-        img_num = random.randint(1,3869)
+        imgDirPath = os.getcwd()
+        imgFileList = process_file.getFileListInPath(imgDirPath)
+        maxNum = len(imgFileList)-1
+        img_num = random.randint(1,maxNum)
         reply=ArticlesReply(message=message)
         if count <= 1000:
             article = Article(
