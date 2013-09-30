@@ -30,10 +30,12 @@ def echo(message):
 @robot.text
 def echo(message,session):
     if message.content == 't' or message.content == 'T':
-        id = session.get("wechat_id",0)
-        return id
+        id = message.source
+        session = session_storage[id]
+        s = '%id\'s seesion is %s' %id %session
+        return s
     elif message.content == 'a' or message.content == 'A':
-        return 'haha'
+        return 'ok'
 
 #@robot.text
 #def echo(message,session):
