@@ -49,6 +49,7 @@ def echo(message,session):
     #    return "%s" %count
     if message.content == 'x' or message.content == 'X':
         count = session.get("count",0)+1
+
         session["count"]=count
         imgDirPath = os.getcwd()+'/image/jiandan/'
         imgFileList = process_file.getFileListInPath(imgDirPath)
