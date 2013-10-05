@@ -29,7 +29,7 @@ def subscribe(message):
 def echo(message):
     return '有本事站在原地不要离开，分分钟找人来砍死你！'
 
-@robot.text
+#@robot.text
 #def echo(message,session):
 #    if message.content == 't' or message.content == 'T':
 #        id = message.source
