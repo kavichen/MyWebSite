@@ -54,8 +54,8 @@ def echo(message,session):
         imgDirPath = os.getcwd()+'/image/jiandan/'
         imgFileList = process_file.getFileListInPath(imgDirPath)
         maxNum = len(imgFileList)-1 # 有个爬虫程序 jiandan.py
-        #img_num = random.randint(1,maxNum)
-        img_num = random.randint(1,500)
+        img_num = random.randint(1,maxNum)
+        #img_num = random.randint(1,500)
         reply=ArticlesReply(message=message)
         if count <= 1000:
             article = Article(
