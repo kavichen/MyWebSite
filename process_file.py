@@ -10,7 +10,7 @@ def trimPath(path):
     path = str(path)
     if path == '':
         return []
-    if path != '!':
+    if path != '/':
         path = path + '/'
     return path
 
