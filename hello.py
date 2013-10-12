@@ -51,7 +51,8 @@ def echo(message,session):
         count = session.get("count",0)+1
 
         session["count"]=count
-        imgDirPath = os.getcwd()+'/image/jiandan'
+        #imgDirPath = os.getcwd()+'/www/image/jiandan'
+        imgDirPath = '/var/www/image/jiandan'
         imgFileList = process_file.getFileListInPath(imgDirPath)
         maxNum = len(imgFileList)-1 # 有个爬虫程序 jiandan.py
         img_num = random.randint(1,maxNum)
