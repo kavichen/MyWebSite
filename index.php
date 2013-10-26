@@ -11,8 +11,8 @@
     <link href='http://fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div class="aligncenter"><a href="#"></a><img src="image/portrait.png"></div>
-<h1 class="name"> Kavi Chen  ||  Gina Lee</h1>
+<div class="aligncenter"><a href="#"></a><img src="image/portrait240.png"></div>
+<h1 class="name"> Kavi Chen</h1>
 <div class="main">
 <h2>Resume</h2>
 <p>A software engineer, a shutterbug.</p>
