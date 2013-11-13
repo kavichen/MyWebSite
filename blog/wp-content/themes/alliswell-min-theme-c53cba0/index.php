@@ -5,13 +5,13 @@
         <?php query_posts("cat=-100,-101,-102&paged=$paged")?><?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
                 <div class="post" id="post-<?php the_ID(); ?>">
-                    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+                    <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
                     <span class="date">by <?php the_author(); ?> on <?php the_time(__('m/j/Y','min')) ?></span>
                     <div class="clearfix"></div>
                     <div class="entry">
                         <?php the_content(__('Continue Reading','min').' &raquo;'); ?>
                     </div>
-                    <span class="number-of-comments"><a href="<?php the_permalink() ?>#comments" title="title"><?php comments_number(__('No Comments','min'), __('1 Comment','min'), __('% Comments','min'));?></a></span>
+                    <span class="number-of-comments"><a href="<?php the_permalink() ?>#comments"><?php comments_number(__('No Comments','min'), __('1 Comment','min'), __('% Comments','min'));?></a></span>
                 </div><!-- close:post -->
             <?php endwhile; ?>
             <div class="pagination clearfix">
