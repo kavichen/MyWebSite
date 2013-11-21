@@ -15,7 +15,7 @@ Author URI: http://www.jarederickson.com/
 	Typography
 	
 *********************************************/
-
+*::-moz-selelction{background-color:#006837;color:#FFFFFF;}
 p { margin: 1em 17px; }
 h1 { line-height: 120%; margin:0 0 1em; font-size: 25px; font-weight: normal; }
 a.back { text-decoration: underline; }
@@ -31,7 +31,7 @@ a.back { text-decoration: underline; }
 	
 *********************************************/
 
-#wrapper { color: #999; font-family: "Lucida Grande", Helvetica, Arial, sans-serif; font-size: 15px; line-height: 145%; margin: 0 auto; padding: 0 2em; width: 900px; }
+#wrapper { color: #999; font-family: "Lucida Grande", Helvetica, Arial, sans-serif; font-size: 15px; line-height: 145%; margin: 0 auto; padding: 0 2em; width: 960px; }
 
 #header { margin: 0 0 -1em 0; padding: 5em 0 0 0; position: relative; }
 #header .description { font-size: 15px; color:#949494; margin: .5em 0 0 0 font-family:"Lucida Grande",Helvetica, Arial, sans-serif;}
@@ -48,7 +48,7 @@ a.back { text-decoration: underline; }
 .post .vvqbox { margin: 2em auto; }
 .post .date { color: #949494; font-size: 12px; position: absolute; top: 0; right: 0; }
 
-.post h1, h2, h3, h4 { color:222222; margin-bottom:0.3em; margin-top:2em;}
+.post h1, h2, h3, h4, h5 { color:222222; margin-bottom:0.3em; margin-top:2em;}
 .post h1 a:{  text-decoration: none; }
 .post h1 a:link, .post h1 a:visited { color: #484848; }
 .post h1 a:hover, .post h1 a:active, .post h1 a:focus { color: #3A4A5C; }
@@ -60,6 +60,8 @@ a.back { text-decoration: underline; }
 .post h2 {  font-size: 22px; line-height: 120%; font-weight: normal;}
 .post h3 {  font-family: Helvetica, Arial, sans-serif; font-size: 19px; font-weight: normal; line-height: 120%; }
 .post h4 {  font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 120%; }
+.post h5 {  font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 120%; }
+
 .post blockquote cite { font-style: normal; }
 .post .number-of-comments a { text-decoration: underline; font-size: 13px; }
 #comments { font-size: 13px; }
